@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дорога домой</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<canvas id="c"></canvas>
+<div id="hud" class="hide">
+ <div id="bars" class="glass">
+  <div class="m"><span>⚖️ Закон</span><i><b id="bL"></b></i></div>
+  <div class="m"><span>❤️ Семья</span><i><b id="bF"></b></i></div>
+  <div class="m"><span>⛽ Топливо</span><i><b id="bG"></b></i></div>
+  <div class="m"><span>🔧 Кузов</span><i><b id="bD"></b></i></div>
+  <div id="money">🪙 <span id="mo">0</span> ₸</div>
+ </div>
+ <div id="top" class="glass"><div id="goal"></div><small id="zone"></small></div>
+ <div id="speedo"><div id="lim">60</div><div id="ring"><div><b id="spd">0</b><small>км/ч</small><em id="gear">N</em></div></div><div id="crz" class="glass"></div></div>
+ <div id="mmWrap" class="glass"><canvas id="mini" width="240" height="80"></canvas><small>WASD ехать · Пробел ручник · C круиз · F войти · P телефон · M карта · H справочник</small></div>
+ <div id="prompt" class="glass hide"></div>
+ <div id="toasts"></div>
+</div>
+<div id="dlg" class="box hide"></div>
+<div id="phone" class="box hide"></div>
+<div id="menu" class="screen">
+ <h1 id="logo">ДОРОГА<br>ДОМОЙ</h1><div id="splash"></div>
+ <button id="bPlay" class="mc">Играть</button>
+ <button id="bBook" class="mc">Справочник</button>
+ <button id="bMap" class="mc">Карта мира</button>
+ <small id="foot">Дипломный проект · v0.4</small>
+</div>
+<div id="load" class="screen hide"><p>Генерация мира…</p><div id="bar"><b></b></div><small id="tip"></small></div>
+<div id="pause" class="screen hide"><h2>Пауза</h2>
+ <button id="pResume" class="mc">Продолжить</button><button id="pBook" class="mc">Справочник</button>
+ <button id="pMap" class="mc">Карта мира</button><button id="pMenu" class="mc">В главное меню</button></div>
+<div id="book" class="screen hide"><div id="tabs"></div><div id="bookbody"></div><button class="mc closeB">Закрыть (Esc)</button></div>
+<div id="map" class="screen hide"><canvas id="mapc" width="960" height="320"></canvas><small>Красная точка — вы · жёлтое кольцо — цель</small><button class="mc closeB">Закрыть (Esc)</button></div>
+<div id="shop" class="screen hide"><h2 id="shoptitle"></h2><div id="shopbody"></div><button class="mc closeB">Закрыть (Esc)</button></div>
+<script type="module" src="src/main.js"></script>
+</body></html>
